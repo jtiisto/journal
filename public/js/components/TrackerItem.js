@@ -80,7 +80,6 @@ export function TrackerItem({ tracker }) {
                         onInput=${handleSliderChange}
                         disabled=${!editable}
                     />
-                    <span class="slider-value">${value ?? 50}%</span>
                 </div>
             `}
         </div>
