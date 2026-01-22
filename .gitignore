@@ -7,6 +7,10 @@ __pycache__/
 # Database
 journal.db
 
+# Server runtime files
+.server.pid
+server.log
+
 # IDE/Editor
 .claude/
 .vscode/
