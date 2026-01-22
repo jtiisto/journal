@@ -1,0 +1,19 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Database
+journal.db
+
+# IDE/Editor
+.claude/
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+
+# PDFs (large binary files)
+*.pdf
