@@ -29,7 +29,20 @@ export function TrackerItem({ tracker }) {
 
     const handleCompletedChange = (e) => {
         if (!editable) return;
-        updateEntry(date, tracker.id, { completed: e.target.checked });
+        const newCompleted = e.target.checked;
+        const updateData = { completed: newCompleted };
+
+        // When checking a quantifiable/evaluation tracker without an existing value,
+        // include the default value in the entry
+        if (newCompleted && entry.value === undefined) {
+            if (tracker.type === 'quantifiable' && tracker.defaultValue !== undefined) {
+                updateData.value = tracker.defaultValue;
+            } else if (tracker.type === 'evaluation') {
+                updateData.value = tracker.defaultValue ?? 50;
+            }
+        }
+
+        updateEntry(date, tracker.id, updateData);
     };
 
     const handleValueChange = (e) => {
