@@ -202,15 +202,6 @@ pytest test/ -v --cov=src --cov-report=term-missing
 pytest test/integration/test_sync_update.py -v
 ```
 
-### Git Hooks
-
-The project includes pre-configured git hooks:
-
-- **pre-commit**: Runs tests with fail-fast mode before each commit
-- **pre-push**: Runs the full test suite with 90% coverage requirement before push
-
-These hooks are located in `.git/hooks/` and run automatically.
-
 ### Database Schema
 
 The SQLite database contains the following tables:
