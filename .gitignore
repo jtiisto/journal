@@ -29,3 +29,6 @@ server.log
 .pytest_cache/
 .coverage
 htmlcov/
+
+# Deployment scripts (local-only)
+bin/deploy-prod.sh
