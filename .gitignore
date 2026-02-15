@@ -32,3 +32,6 @@ htmlcov/
 
 # Deployment scripts (local-only)
 bin/deploy-prod.sh
+
+# Planning docs (local-only)
+installable.md
